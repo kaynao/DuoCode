@@ -1,0 +1,81 @@
+{
+  "name": "CodeChallenge",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo do desafio"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o do problema"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "junior",
+        "pleno",
+        "senior"
+      ],
+      "default": "junior"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "python",
+        "cpp",
+        "theory"
+      ],
+      "description": "Linguagem de programa\u00e7\u00e3o ou teoria"
+    },
+    "challenge_type": {
+      "type": "string",
+      "enum": [
+        "complete",
+        "fix_bug",
+        "optimize",
+        "theory"
+      ],
+      "description": "Tipo do desafio"
+    },
+    "starter_code": {
+      "type": "string",
+      "description": "C\u00f3digo inicial fornecido"
+    },
+    "expected_output": {
+      "type": "string",
+      "description": "Output esperado ou resposta correta"
+    },
+    "test_cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string"
+          },
+          "expected": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Casos de teste ou op\u00e7\u00f5es de m\u00faltipla escolha"
+    },
+    "hints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Dicas para ajudar"
+    },
+    "points": {
+      "type": "number",
+      "default": 100,
+      "description": "Pontos ao completar"
+    }
+  },
+  "required": [
+    "title",
+    "language"
+  ]
+}

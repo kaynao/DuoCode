@@ -1,0 +1,51 @@
+{
+  "name": "GameProgress",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email do estudante"
+    },
+    "current_level": {
+      "type": "number",
+      "default": 1,
+      "description": "N\u00edvel atual do jogador"
+    },
+    "total_score": {
+      "type": "number",
+      "default": 0,
+      "description": "Pontua\u00e7\u00e3o total acumulada"
+    },
+    "challenges_completed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "IDs dos desafios completados"
+    },
+    "best_times": {
+      "type": "object",
+      "description": "Melhores tempos por desafio",
+      "default": {}
+    },
+    "current_streak": {
+      "type": "number",
+      "default": 0,
+      "description": "Sequ\u00eancia atual de desafios completos"
+    },
+    "best_streak": {
+      "type": "number",
+      "default": 0,
+      "description": "Melhor sequ\u00eancia j\u00e1 alcan\u00e7ada"
+    },
+    "energy": {
+      "type": "number",
+      "default": 100,
+      "description": "N\u00edvel de energia/moral (0-100)"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}
